@@ -17,7 +17,7 @@
 </div>
 <!-- /////about -->
 
-<div style="position:absolute; bottom: 150px; right:200px;">
+<div onclick="if(aboutin ){vidIn()}else{vidOut()}" style="opacity:0; width:500px; height:500px;position:absolute; bottom: 150px; right:200px; z-index:10;">
 <img src="about.svg" alt="image">
 </div>
 
@@ -30,7 +30,7 @@
 </a>
 </div>
 <!-- ig -->
-<div style="position:absolute; top:110px; right:50px;">
+<div style="position:absolute; top:110px; right:50px; ">
 <img src="ig.svg" alt="image">
 </div>
 <!-- in -->
@@ -41,6 +41,67 @@
 <div style="position:absolute; top:245px; right:50px;">
 <img src="peace.svg" alt="image">
 </div>
+
+
+
+
+
+<video style="position:absolute; bottom:95px; right:-30px; opacity:.5;" id="myVideo1" width="500" >
+  <source  src="about - IN-v03.mp4" type="video/mp4">
+
+</video>
+<video style="position:absolute; bottom:95px; right:-30px;z-index:-1;opacity:.5;" id="myVideo2" width="500" >
+  <source  src="about - OUT-v03.mp4" type="video/mp4">
+
+</video>
+
+<script>
+var vid1 = document.getElementById("myVideo1");
+var vid2 = document.getElementById("myVideo2");
+
+// var clicks = 0;
+var aboutin = true;
+
+function vidIn() {
+	vid2.style.zIndex = "-1";
+	vid1.style.zIndex = "1";
+
+	vid1.currentTime = 0;
+  vid1.load();
+  vid1.play();
+
+	aboutin = false;
+	// clicks =1;
+}
+
+function vidOut() {
+	vid1.pause();
+	vid2.style.zIndex = "1";
+
+  vid1.style.zIndex = "-1";
+	// vid1.hide();
+	vid2.currentTime = 0;
+vid2.load();
+  vid2.play();
+	// vid1.show();
+	aboutin = true;
+	// clicks =2;
+}
+
+//
+// function pauseVid1() {
+// 	if(clicks%2==false)
+//   vid1.pause();
+// 	playing=false;
+// }
+//
+// function pauseVid2() {
+// 	if(clicks%2)
+//   vid2.pause();
+// 	playing=false;
+// }
+</script>
+
 		<script type="module">
 
 			import * as THREE from '../build/three.module.js';
@@ -121,16 +182,6 @@
 				scene.background = new THREE.Color( 0xDFDFDA );
 				// scene.fog = new THREE.Fog( 0xDFDFDA, 250, 1400 );
 
-				// LIGHTS
-
-
-
-				// materials = [
-				// 	new THREE.MeshBasicMaterial( { color: 0xDFDFDA } ), // front
-				// 	// new THREE.MeshBasicMaterial( { color: 0xDFDFDA, color: 0xDFDFDA, 1: true } ) // front
-				//
-				// 	new THREE.MeshBasicMaterial( { color: 0xDFDFDA } ) // side
-				// ];
 
 				group = new THREE.Group();
 				group.position.y = 100;
@@ -217,8 +268,6 @@
 				textGeo.computeBoundingBox();
 				textGeo.computeVertexNormals();
 
-				// "fix" side normals by removing z-component of normals for side faces
-				// (this doesn't work well for beveled geometry as then we lose nice curvature around z-axis)
 
 				if ( ! bevelEnabled ) {
 
@@ -275,7 +324,7 @@
 
 				wireframe.rotation.x = 0;
 					wireframe.rotation.y = Math.PI * 2;
-				group.add( wireframe );
+				group.add( wireframe);
 
 			}
 
@@ -353,8 +402,6 @@
 
 			}
 
-			//
-
 			function animate() {
 
 				requestAnimationFrame( animate );
@@ -367,6 +414,7 @@
 			function render() {
 
 				group.rotation.y += ( targetRotation - group.rotation.y ) * 0.05;
+				group.rotation.y += .3;
 
 				camera.lookAt( cameraTarget );
 

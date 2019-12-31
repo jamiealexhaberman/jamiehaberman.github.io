@@ -8,98 +8,72 @@
 	</head>
 	<body>
 
-		<div id="info">
-
 <!-- /////slogan -->
-		</div>
 		<div style="position:absolute; left: 80px; top:80px;">
   <img src="powering.svg" alt="image">
 </div>
-<!-- /////about -->
 
-<div onclick="if(aboutin ){vidIn()}else{vidOut()}" style="opacity:0; width:500px; height:500px;position:absolute; bottom: 150px; right:200px; z-index:10;">
+<!-- /////about -->
+<div id="about" onclick="if(aboutin ){vidIn() }else{vidOut()}">
 <img src="about.svg" alt="image">
 </div>
 
 <!-- /////links -->
 <!-- hrs -->
-
-<div style="position:absolute; top:47px; right:47px;">
+<div class="social-link" id="hrs">
 	 <a href="https://www.human-re-sources.com/">
 <img src="hrs.svg" alt="image">
 </a>
 </div>
 <!-- ig -->
-<div style="position:absolute; top:110px; right:50px; ">
+<div class="social-link" id="ig">
 <img src="ig.svg" alt="image">
 </div>
 <!-- in -->
-<div style="position:absolute; top:180px; right:50px;">
+<div class="social-link" id="in">
 <img src="in.svg" alt="image">
 </div>
 <!-- angelist -->
-<div style="position:absolute; top:245px; right:50px;">
+<div class="social-link" id="peace">
 <img src="peace.svg" alt="image">
 </div>
 
 
 
-
-
-<video style="position:absolute; bottom:95px; right:-30px; opacity:.5;" id="myVideo1" width="500" >
+<video class = "about-animation" id="animate-in"  width="500" >
   <source  src="about - IN-v03.mp4" type="video/mp4">
 
 </video>
-<video style="position:absolute; bottom:95px; right:-30px;z-index:-1;opacity:.5;" id="myVideo2" width="500" >
+<video class = "about-animation" id="animate-out"  width="500" >
   <source  src="about - OUT-v03.mp4" type="video/mp4">
 
 </video>
 
 <script>
-var vid1 = document.getElementById("myVideo1");
-var vid2 = document.getElementById("myVideo2");
+var vid1 = document.getElementById("animate-in");
+var vid2 = document.getElementById("animate-out");
 
-// var clicks = 0;
 var aboutin = true;
 
 function vidIn() {
 	vid2.style.zIndex = "-1";
 	vid1.style.zIndex = "1";
-
 	vid1.currentTime = 0;
   vid1.load();
   vid1.play();
-
 	aboutin = false;
-	// clicks =1;
 }
 
 function vidOut() {
 	vid1.pause();
 	vid2.style.zIndex = "1";
-
   vid1.style.zIndex = "-1";
-	// vid1.hide();
 	vid2.currentTime = 0;
 vid2.load();
   vid2.play();
-	// vid1.show();
 	aboutin = true;
-	// clicks =2;
 }
 
-//
-// function pauseVid1() {
-// 	if(clicks%2==false)
-//   vid1.pause();
-// 	playing=false;
-// }
-//
-// function pauseVid2() {
-// 	if(clicks%2)
-//   vid2.pause();
-// 	playing=false;
-// }
 </script>
 
 		<script type="module">
@@ -328,6 +302,7 @@ vid2.load();
 
 			}
 
+
 			function refreshText() {
 
 
@@ -422,6 +397,8 @@ vid2.load();
 				renderer.render( scene, camera );
 
 			}
+
+
 
 		</script>
 

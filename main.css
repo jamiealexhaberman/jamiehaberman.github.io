@@ -2,25 +2,9 @@ body {
 	margin: 0;
 	background-color: #DFDFDA;;
 	color: #fff;
-	font-family: Monospace;
-	font-size: 13px;
-	line-height: 24px;
 	overscroll-behavior: none;
 }
 
-a {
-	color: #ff0;
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-button {
-	cursor: pointer;
-	text-transform: uppercase;
-}
 
 canvas {
 	display: block;
@@ -28,20 +12,45 @@ canvas {
 
 }
 
-#info {
-	position: absolute;
-	top: 0px;
-	width: 100%;
-	padding: 10px;
-	box-sizing: border-box;
-	text-align: center;
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	pointer-events: none;
-	z-index: 1; /* TODO Solve this in HTML */
+#about {
+	opacity:0;
+	width:500px;
+	height:500px;
+	position:absolute;
+	bottom: 150px;
+	right:200px;
+	z-index:10;
 }
+.social-link {
+	position:absolute;
+}
+#hrs {
+	top:47px;
+	right:47px;
+}
+
+#ig {
+	top:110px;
+	right:50px;
+}
+#in {
+	top:180px;
+	right:50px;
+}
+#peace {
+	top:245px;
+	right:50px;
+}
+.about-animation {
+	position:absolute;
+	bottom:95px;
+	right:-30px;
+	opacity:0.5;
+}
+#animate-out {
+	z-index:-1;
+}
+
 
 a, button, input, select {
 	pointer-events: auto;

@@ -40,14 +40,12 @@
 <img src="peace.svg" alt="image">
 </div>
 
-
-
 <video class = "about-animation" id="animate-in"  width="500" >
-  <source  src="about - IN-v03.mp4" type="video/mp4">
+  <source  src="about - IN.mp4" type="video/mp4">
 
 </video>
 <video class = "about-animation" id="animate-out"  width="500" >
-  <source  src="about - OUT-v03.mp4" type="video/mp4">
+  <source  src="about - OUT.mp4" type="video/mp4">
 
 </video>
 
@@ -335,6 +333,7 @@ vid2.load();
 
 				targetRotation = targetRotationOnMouseDown + ( mouseX - mouseXOnMouseDown ) * 0.02;
 
+
 			}
 
 			function onDocumentMouseUp() {
@@ -392,6 +391,8 @@ vid2.load();
 
 				group.rotation.y += ( targetRotation - group.rotation.y ) * 0.05;
 				group.rotation.y += .3;
+
+
 
 				camera.lookAt( cameraTarget );
 

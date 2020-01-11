@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-	background-color: #DFDFDA;;
+	background-color: #EAEAEA;;
 	color: #fff;
 	overscroll-behavior: none;
 }
@@ -8,7 +8,7 @@ body {
 
 canvas {
 	display: block;
-	background-color: #DFDFDA;;
+	background-color: #EAEAEA;;
 
 }
 
@@ -24,7 +24,7 @@ position:absolute;
 
 }
 li.pointer {
-cursor: url('cursor.png'), auto;
+/* cursor: url('cursor.png'), auto; */
 opacity:0.5;
 
 }
@@ -60,9 +60,10 @@ opacity:0.5;
 }
 .about-animation {
 	position:absolute;
-	bottom:95px;
-	right:-30px;
-	opacity:0.5;
+	bottom:35px;
+	right:120px;
+	opacity:1;
+	mix-blend-mode: darken;
 }
 #animate-out {
 	z-index:-1;

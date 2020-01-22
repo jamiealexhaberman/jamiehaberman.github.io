@@ -87,11 +87,6 @@ a, button, input, select {
 }
 
 
-#c {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
 
 @media only screen and (max-width: 600px) {
 
@@ -103,12 +98,10 @@ a, button, input, select {
 		width: 40%;
 	}
 	.about-animation {
-		position:absolute;
 		bottom:35px;
 		width:80%;
 		right:1%;
-		opacity:1;
-		mix-blend-mode: darken;
+
 	}
 	#logo3d{
 		width:50%;

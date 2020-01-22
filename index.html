@@ -9,9 +9,8 @@
 	<body>
 
 <!-- /////slogan -->
-		<div style="position:absolute; left: 80px; top:80px;">
-  <img src="powering.svg" alt="image">
-</div>
+
+  <img id="slogan"src="powering.svg" alt="image">
 
 <!-- /////about -->
 <div id="about" onclick="if(aboutin ){vidIn() }else{vidOut()}">
@@ -24,20 +23,20 @@
 <!-- hrs -->
 <div class="social-link" id="hrs">
 	 <a href="https://www.human-re-sources.com/">
-<img src="hrs.svg" alt="image">
+<img id="icon" src="hrs.svg" alt="image">
 </a>
 </div>
 <!-- ig -->
 <div class="social-link" id="ig">
-<img src="ig.svg" alt="image">
+<img id="icon" src="ig.svg" alt="image">
 </div>
 <!-- in -->
 <div class="social-link" id="in">
-<img src="in.svg" alt="image">
+<img id="icon"src="in.svg" alt="image">
 </div>
 <!-- angelist -->
-<div class="social-link" id="peace">
-<img src="peace.svg" alt="image">
+<div  class="social-link" id="peace">
+<img id="icon" src="peace.svg" alt="image">
 </div>
 
 <video class = "about-animation" id="animate-in"  width="500" >
@@ -74,9 +73,9 @@ vid2.load();
 	aboutin = true;
 }
 
-</script>
 
-		<script type="module">
+</script>
+		<script type="module" id="logo3d">
 
 			import * as THREE from '../build/three.module.js';
 			import { LineMaterial } from './jsm/lines/LineMaterial.js';
@@ -91,6 +90,7 @@ vid2.load();
 			var container, stats, permalink, hex;
 
 			var camera, cameraTarget, scene, renderer;
+
 
 			var group, textMesh1, textGeo, materials;
 
@@ -137,6 +137,9 @@ vid2.load();
 			}
 
 			function init() {
+
+				// canvas = document.querySelector('#c');
+ 				// renderer = new THREE.WebGLRenderer({canvas});
 
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );
@@ -404,6 +407,5 @@ vid2.load();
 
 
 		</script>
-
 	</body>
 </html>

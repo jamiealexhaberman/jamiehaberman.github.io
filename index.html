@@ -17,8 +17,6 @@
 <img src="about.svg" alt="image">
 </div>
 
-<li class="pointer"></li>
-
 <!-- /////links -->
 <!-- hrs -->
 <div class="social-link" id="hrs">
@@ -143,6 +141,7 @@ vid2.load();
  				// renderer = new THREE.WebGLRenderer({canvas});
 
 				container = document.createElement( 'div' );
+				container.setAttribute("class", "3d-logo")
 				document.body.appendChild( container );
 
 				permalink = document.getElementById( "permalink" );
@@ -173,7 +172,20 @@ vid2.load();
 
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
 				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( window.innerWidth, window.innerHeight );
+
+								if (window.innerWidth<500){
+									renderer.setSize( window.innerWidth-500, window.innerHeight );
+
+								}
+								else{
+
+
+														renderer.setSize( window.innerWidth, window.innerHeight );
+
+
+								}
+				// renderer.setSize( window.innerWidth, window.innerHeight );
+
 				container.appendChild( renderer.domElement );
 
 				// STATS
@@ -190,20 +202,20 @@ vid2.load();
 
 				//
 
-				window.addEventListener( 'resize', onWindowResize, false );
+				// window.addEventListener( 'resize', onWindowResize, false );
 
 			}
 
-			function onWindowResize() {
-
-				windowHalfX = window.innerWidth / 2;
-
-				camera.aspect = window.innerWidth / window.innerHeight;
-				camera.updateProjectionMatrix();
-
-				renderer.setSize( window.innerWidth, window.innerHeight );
-
-			}
+			// function onWindowResize() {
+			//
+			// 	windowHalfX = window.innerWidth / 2;
+			//
+			// 	camera.aspect = window.innerWidth / window.innerHeight;
+			// 	camera.updateProjectionMatrix();
+			//
+			// 	renderer.setSize( window.innerWidth, window.innerHeight );
+			//
+			// }
 
 			//
 

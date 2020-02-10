@@ -109,9 +109,8 @@ opacity:0.5;
 		width: 130px;
 	}
 	.about-animation {
-		bottom:35px;
-		width:80%;
-		right:1%;
+
+		display:none
 	}
 
 }

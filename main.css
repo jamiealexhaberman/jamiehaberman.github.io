@@ -84,6 +84,14 @@ opacity:0.5;
 #animate-out {
 	z-index:-1;
 }
+#explain{
+
+	width:70%;
+	position: absolute;
+	bottom:10px;
+	left:10px;
+	display: none;
+}
 
 
 
@@ -98,8 +106,10 @@ opacity:0.5;
 
 
 
-@media only screen and (max-width: 800px) {
-
+@media only screen and (max-width: 600px) {
+	#explain{
+		display: block;
+}
 	#icon {
     width:20px;
   }
@@ -109,7 +119,7 @@ opacity:0.5;
 		width: 130px;
 	}
 	.about-animation {
-
+		visibility: hidden;
 		display:none
 	}
 

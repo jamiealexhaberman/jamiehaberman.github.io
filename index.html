@@ -30,8 +30,9 @@
 </div>
 <!-- in -->
 <div class="social-link" id="in">
-		 <a href="https://www.linkedin.com/company/qandamedia/">
-<img id="icon"src="in.svg" alt="image">
+	<a href="https://www.linkedin.com/company/qandamedia/">
+
+<img  id="icon"src="in.svg" alt="image"></a>
 </div>
 <!-- angelist -->
 <div  class="social-link" id="peace">
@@ -174,10 +175,12 @@ vid2.load();
 				renderer.setPixelRatio( window.devicePixelRatio );
 
 								if (window.innerWidth<500){
-									renderer.setSize( window.innerWidth-200, window.innerHeight-200 );
+									size = size*0.7;
+									renderer.setSize( window.innerWidth, window.innerHeight );
 
 								}
 								else{
+									size=100;
 														renderer.setSize( window.innerWidth, window.innerHeight );
 								}
 				// renderer.setSize( window.innerWidth, window.innerHeight );

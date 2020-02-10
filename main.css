@@ -1,6 +1,8 @@
 body {
 	margin: 0;
-	background-color: #DFDFDA;
+	/* background-color: #DFDFDA; */
+	background-color: red;
+
 	color: #fff;
 }
 
@@ -84,9 +86,7 @@ opacity:0.5;
 }
 
 
-a, button, input, select {
-	pointer-events: auto;
-}
+
 
 .dg.ac {
 	-moz-user-select: none;
@@ -104,14 +104,14 @@ a, button, input, select {
     width:20px;
   }
 	#slogan {
-		left:5%;
-		width: 40%;
+		left:3%;
+		width: 30%;
 	}
 	.about-animation {
 		bottom:35px;
 		width:80%;
 		right:1%;
-
+		display:none;
 	}
 
 }

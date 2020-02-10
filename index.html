@@ -146,7 +146,7 @@ vid2.load();
  				// renderer = new THREE.WebGLRenderer({canvas});
 
 				container = document.createElement( 'div' );
-				container.setAttribute("class", "3d-logo")
+				// container.setAttribute("class", "3d-logo")
 				document.body.appendChild( container );
 
 				permalink = document.getElementById( "permalink" );
@@ -178,15 +178,15 @@ vid2.load();
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
 				renderer.setPixelRatio( window.devicePixelRatio );
 
-								// if (window.innerWidth<500){
-								// 	size = size*0.7;
-								// 	renderer.setSize( window.innerWidth, window.innerHeight );
-								//
-								// }
-								// else{
-								// 	size=100;
-								// 						renderer.setSize( window.innerWidth, window.innerHeight );
-								// }
+								if (window.innerWidth<500){
+									size = size*0.7;
+									renderer.setSize( window.innerWidth, window.innerHeight );
+
+								}
+								else{
+									size=100;
+														renderer.setSize( window.innerWidth, window.innerHeight );
+								}
 				// renderer.setSize( window.innerWidth, window.innerHeight );
 
 				container.appendChild( renderer.domElement );

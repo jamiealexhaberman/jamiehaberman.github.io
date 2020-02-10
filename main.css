@@ -6,23 +6,23 @@ body {
 	color: #fff;
 }
 
-div.3d-logo{
+/* div.3d-logo{
 
 	width: 100%;
 	height: 100%;
-}
+} */
 
 
-canvas {
+/* canvas {
 	display: block;
 	background-color: #EAEAEA;;
 	/* max-width: 500px;
 	min-width: 200px;
 	width: 100%;
 	height: auto; */
-	margin: auto;
+	/* margin: auto; */
+/* }  */
 
-}
 #slogan{
 	position:absolute; left: 80px; top:80px;
 

@@ -121,6 +121,7 @@ opacity:0.5;
 	.about-animation {
 		visibility: hidden;
 		display:none
+		bottom:-1000px;
 	}
 
 }

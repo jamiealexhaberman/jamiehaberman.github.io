@@ -178,15 +178,15 @@ vid2.load();
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
 				renderer.setPixelRatio( window.devicePixelRatio );
 
-								if (window.innerWidth<500){
-									size = size*0.7;
-									renderer.setSize( window.innerWidth, window.innerHeight );
-
-								}
-								else{
-									size=100;
-														renderer.setSize( window.innerWidth, window.innerHeight );
-								}
+								// if (window.innerWidth<500){
+								// 	size = size*0.7;
+								// 	renderer.setSize( window.innerWidth, window.innerHeight );
+								//
+								// }
+								// else{
+								// 	size=100;
+								// 						renderer.setSize( window.innerWidth, window.innerHeight );
+								// }
 				// renderer.setSize( window.innerWidth, window.innerHeight );
 
 				container.appendChild( renderer.domElement );
@@ -205,20 +205,27 @@ vid2.load();
 
 				//
 
-				// window.addEventListener( 'resize', onWindowResize, false );
+				window.addEventListener( 'resize', onWindowResize, false );
 
 			}
 
-			// function onWindowResize() {
-			//
-			// 	windowHalfX = window.innerWidth / 2;
-			//
-			// 	camera.aspect = window.innerWidth / window.innerHeight;
-			// 	camera.updateProjectionMatrix();
-			//
-			// 	renderer.setSize( window.innerWidth, window.innerHeight );
-			//
-			// }
+			function onWindowResize() {
+
+				windowHalfX = window.innerWidth / 2;
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				if (window.innerWidth<500){
+					size = size*0.7;
+					renderer.setSize( window.innerWidth, window.innerHeight );
+
+				}
+				else{
+					size=100;
+										renderer.setSize( window.innerWidth, window.innerHeight );
+				}
+			}
 
 			//
 

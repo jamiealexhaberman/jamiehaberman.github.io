@@ -13,7 +13,7 @@
   <img id="slogan"src="powering.svg" alt="image">
 
 <!-- /////about -->
-<div id="about" onclick="if(screen.width>1000){if(aboutin){vidIn() }else{vidOut()}}">
+<div id="about" onclick="if(screen.width>1000){if(aboutin){vidIn() }else{vidOut()}}else{vidHide()}">
 <img src="about.svg" alt="image">
 </div>
 
@@ -76,6 +76,12 @@ function vidOut() {
 vid2.load();
   vid2.play();
 	aboutin = true;
+
+}
+
+function vidHide(){
+	vid2.style.display = "none";
+	vid1.style.display = "none";
 
 }
 

@@ -320,7 +320,7 @@ vid2.load();
 				textMesh1 = new THREE.Mesh( textGeo, materials );
 
 				var geo = new THREE.EdgesGeometry( textMesh1.geometry ); // or WireframeGeometry
-				var mat = new THREE.LineBasicMaterial( { color: 0x272827, linewidth: 2} );
+				var mat = new THREE.LineBasicMaterial( { color: 0x272827, linewidth: 0.5} );
 				var wireframe = new THREE.LineSegments( geo, mat );
 
 				wireframe.position.x = centerOffset;

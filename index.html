@@ -59,15 +59,19 @@ var vid2 = document.getElementById("animate-out");
 var aboutin = true;
 
 function vidIn() {
+	screen.width < 1000{
 	vid2.style.zIndex = "-1";
 	vid1.style.zIndex = "1";
 	vid1.currentTime = 0;
   vid1.load();
   vid1.play();
 	aboutin = false;
+	}
 }
 
 function vidOut() {
+	screen.width < 1000{
+
 	vid1.pause();
 	vid2.style.zIndex = "1";
   vid1.style.zIndex = "-1";
@@ -75,6 +79,7 @@ function vidOut() {
 vid2.load();
   vid2.play();
 	aboutin = true;
+}
 }
 
 

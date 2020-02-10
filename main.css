@@ -105,36 +105,23 @@ opacity:0.5;
 }
 
 
-@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 812px)
-  and (-webkit-min-device-pixel-ratio: 3) {
-
-		#explain{
-				display: block;
-		}
-			#icon {
-		    width:20px;
-		  }
-			#slogan {
-				left:3%;
-				top:7%;
-				width: 130px;
-			}
-			.about-animation {
-				visibility: hidden;
-				display:none
-				bottom:-1000px;
-			}
-
-}
 
 @media only screen and (max-width: 1000px) {
-
+	#explain{
+		display: block;
+}
+	#icon {
+    width:20px;
+  }
 	#slogan {
 		left:3%;
 		top:7%;
 		width: 130px;
+	}
+	.about-animation {
+		visibility: hidden;
+		display:none
+		bottom:-1000px;
 	}
 
 }

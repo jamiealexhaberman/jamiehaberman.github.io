@@ -20,10 +20,10 @@ body {
 	min-width: 200px;
 	width: 100%;
 	height: auto; */
-	 margin: auto; 
+	 margin: auto;
 vertical-align: middle;
 
-}  
+}
 
 #slogan{
 	position:absolute; left: 80px; top:80px;
@@ -61,21 +61,27 @@ opacity:0.5;
 }
 #hrs {
 	top:47px;
-	right:47px;
+	right:46px;
+}
+#scale{
+	top:120px;
+	right:36px;
+	width:50px;
 }
 
-#ig {
-	top:110px;
-	right:50px;
-}
-#in {
+/* #ig {
 	top:180px;
+	right:50px;
+} */
+#in {
+	top:185px;
 	right:50px;
 }
 #peace {
-	top:245px;
+	top:250px;
 	right:50px;
 }
+
 .about-animation {
 	position:absolute;
 	bottom:35px;
@@ -126,17 +132,21 @@ opacity:0.5;
 		display:none
 		bottom:-1000px;
 	}
-
-#ig {
+	#scale {
+		top:105px;
+		right:36px;
+		width:35px;
+	}
+/* #ig {
 	top:105px;
 	right:50px;
-}
+} */
 #in {
-	top:175px;
+	top:165px;
 	right:50px;
 }
 #peace {
-	top:240px;
+	top:230px;
 	right:50px;
 }
 

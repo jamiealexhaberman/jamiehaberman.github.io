@@ -63,16 +63,16 @@ opacity:0.5;
 	top:47px;
 	right:46px;
 }
-#scale{
+/* #scale{
 	top:120px;
 	right:36px;
 	width:50px;
-}
-
-/* #ig {
-	top:180px;
-	right:50px;
 } */
+
+#ig {
+	top:120px;
+	right:50px;
+}
 #in {
 	top:185px;
 	right:50px;
@@ -132,22 +132,22 @@ opacity:0.5;
 		display:none
 		bottom:-1000px;
 	}
-	#scale {
+	/* #scale {
 		top:105px;
 		right:36px;
 		width:35px;
-	}
-/* #ig {
+	} */
+#ig {
 	top:105px;
-	right:50px;
-} */
+	right:47px;
+}
 #in {
 	top:165px;
-	right:50px;
+	right:47px;
 }
 #peace {
 	top:230px;
-	right:50px;
+	right:47px;
 }
 
 }
